@@ -1,0 +1,140 @@
+#canvas_body{width: 100%;height: 100%;}
+.menu_acordion {
+	width: 805px; 
+	overflow: hidden;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+.menu_acordion .btn1{ 
+	border-color: black;
+    background-color: #555; 
+	border-right-style: solid;
+	border-right-width: 2px; color: white;  border-right-color: white;
+
+}
+/*el hover de btn del menu*/
+.menu_acordion .btn1:hover{background-color: black;}
+.menu_acordion li {
+	position: relative;
+	display: block;
+	width: 160px;
+	float: left;
+	border-left: 1px solid #888;
+	box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	background-color: #555;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	border-left-width: 5px; border-left-style: solid; border-left-color: black;
+}
+
+.menu_acordion ul:hover li {width: 40px;background-color: #555;}
+.menu_acordion ul li:hover {width: 640px;background-color: #555;}
+
+/*Image title styles*/
+.image_title {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0; bottom: 0;	
+   width: 640px;
+   height: 20px;
+  	
+
+}
+
+.image_title a {
+	display: block;
+	color: #fff;
+	margin-top: 20px;
+}
+/*menu de index pagina principal color y diseño*/
+ body  {  position: relative; background-color:  #adadad;
+ 	
+	}
+	/*para que el menu este estatico*/
+	.cabezera_java{height: 60px;}
+.affix {
+         top:0;
+         width: 100%;
+         z-index: 9999 !important;
+}
+.navbar{ 
+	margin-bottom: 0px;  
+	border:none; 
+	background-color: #555; 
+	border-radius: 0px;	
+}
+.affix ~ .container-fluid {  position: relative; }
+.navbar .actives{
+	color:#999;
+	border-right-style: solid;
+	border-radius: 5px;
+	background-color: white;
+	background-image: linear-gradient(white, rgba(255, 255, 255, 0));
+	animation: actives 3s infinite alternate;
+}
+@keyframes actives{
+	100%{background-color: black;}
+}
+/*color para pie de pagina*/
+.color_pie_pagina{
+	height: 50px;
+		background-color: hsla(21, 50%, 92%, 1);
+		animation: color_pie_pagina 3s infinite alternate;
+		color:black;
+}
+@keyframes color_pie_pagina{
+		20%{background-color: hsla(21, 50%, 92%, 1);}
+		40%{background-color: hsla(360, 52%, 4%, 1);}
+		60%{background-color: hsla(118, 0%, 16%, 1);}
+		80%{background-color: hsla(30, 4%, 43%, 1);}
+		100%{background-color: hsla(265, 52%, 0%, 1);}
+}
+
+/*poner texto delante de una imagen*/
+.vista_texto img          {transition: all 0.4s ease-in-out 0.5s;}
+ .vista_texto   .img_mano img {transition: all 0.4s ease-in-out 0.5s;}
+.vista_texto h2           {filter: alpha(opacity=0);   opacity: 0;  border-bottom: 1px solid rgba(0, 0, 0, 0.3);    margin: 20px 40px 0px 40px;   transform: scale(10);    transition: all 0.3s ease-in-out 0.1s;}
+.vista_texto p            {filter: alpha(opacity=0);   opacity: 0;  transform: scale(10);         transition: all 0.3s ease-in-out 0.2s;}
+
+.vista_texto .color_fondo {
+	  opacity: 0; width: 100%; height: 100%;
+      transition: all 0.3s ease-in 0.4s;
+    }
+.vista_texto a      {filter: alpha(opacity=0);   opacity: 0;  transform: translateY(100px); transition: all 0.3s ease-in-out 0.1s;}
+.vista_texto:hover .color_fondo  {filter: alpha(opacity=100); opacity: 1;  transition-delay: 0s;background: rgba(146,96,91,0.5); }
+.vista_texto:hover h2     {filter: alpha(opacity=100); opacity: 1;  transform: scale(1);   transition-delay: 0.1s;}
+.vista_texto:hover p      {filter: alpha(opacity=100); opacity: 1;  transform: scale(1);   transition-delay: 0.2s;}
+.vista_texto:hover img    {transition-delay: 0s;}
+.vista_texto:hover a {filter: alpha(opacity=100); opacity: 1;  transform: translateY(0px); transition-delay: 0.3s; }
+.vista_img{transition-delay: 0s;
+		text-align:  justify;
+        overflow: hidden; 
+        position: relative;   
+        cursor: default;   
+        background: #fff no-repeat center center;
+    }
+.vista_img .color_fondo,.vista_img .content {
+	 position: absolute;  
+     overflow: hidden;  top: 0;    left: 0;
+	 opacity: 1;  transition-delay: 0s;
+ }
+.vista_img img                  {display: block;           position: relative;}
+.vista_img h2                   {text-transform: uppercase;color: #fff;       text-align: center;   position: relative;font-size: 17px;    padding: 10px;    background: rgba(0, 0, 0, 0.8);    margin: 20px 0 0 0;}
+.vista_img p                    {text-align: center;       color: #fff;}
+/*diseño para contenedor de codigo java*/
+.contenedor_texto_java{
+	        background-color: black;
+	        font-size: 16px;
+	        color: white;           
+}
+i{color: rgba(65,61,188,1);}
+#comentario{color:rgba(20, 71, 0, 1);}
+#verde{color:rgba(38, 217, 139, 1);}
+#morada{color:rgba(132, 28, 156, 1);}
+#marron{color: rgba(166, 81, 38, 1)}
+#amarillo{color:rgba(204, 212, 115, 1);}
+#celeste{color: rgba(131, 226, 215, 1);}

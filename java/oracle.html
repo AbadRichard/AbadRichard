@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-social.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" href="../img/one piece.ico" >
+<title>AbadRichard.com</title>
+</head>
+<body>
+
+<div class="llevar_contenido_al_contenedor">
+<div class="container">
+<div class="row">
+	<div class="col-lg-2"></div>
+	<div class="col-lg-8">
+	<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="btn-link">Conexion a DB MYSQL:-</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+  	        	sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  	        	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  	    </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+  		<div class="panel-heading">
+  			<h4 class="panel-title">
+  			   <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="btn-link">Click para Ver Clase DB Conexion:-</a> en Este parte tenemos una clase para conectar java con db
+  			</h4>
+  		</div>
+  		<div id="collapse2" class="panel-collapse collapse">
+  		<div class="panel-body">
+  		<pre class="contenedor_texto_java">
+  	    <i>package</i> Connections;
+        <i>import</i> java.sql.*;
+        <i>import</i> java.util.logging.Level;
+        <i>import</i> java.util.logging.Logger;
+        <i id="comentario">
+        /*
+        * @author RICHARD
+        */</i>
+        <i>public class</i> <i  id="verde">ConexionDB</i> {
+          <i>public static</i> Connection getConneccion(){
+            <i id="morada">try</i>{
+                <i id="verde">Class</i>.forName(<i id="marron">"com.mysql.jdbc.Driver"</i>); <i id="comentario"> //DRIVER DE SQL DEVELOPER</i>
+                <i id="verde">String</i> myDB = <i id="marron">"jdbc:mysql://localhost:3306/colegio"</i>;<i id="comentario">//URL DE SQL DEVELOPER</i>
+                <i id="verde">String</i> usuario=<i id="marron">"root"</i>;
+                <i id="verde">String</i> password=<i id="marron">""</i>;
+                <i id="verde">Connection</i> cnx = <i id="verde">DriverManager</i>.getConnection(myDB,usuario,password);
+                <i id="morada">return</i> cnx;
+                          } 
+            <i id="morada">catch</i>(<i id="verde">SQLException</i> ex) {
+                  <i id="verde">System</i>.out.println(ex.getMessage());
+                      }<i id="morada">catch </i>(<i id="verde">ClassNotFoundException</i> ex) {
+                    <i id="verde">Logger</i>.getLogger(<i id="verde">ConexionDB</i>.class.getName()).log(<i id="verde">Level</i>.SEVERE, <i>null</i>, ex);
+                      }
+                      <i id="morada">return</i> <i>null</i>;
+                }  
+          }</pre>
+         </div>
+     		 </div>
+    </div>
+  	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="btn-link"> Click para ve la Clase Distrito:-</a>
+            Esta clase usaremos para obtener datos de la db
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">
+          <pre class="contenedor_texto_java">
+            <i>package</i>   modelo;
+            <i id="comentario">
+            /**
+            * @author RICHARD
+            */</i>
+            <i>public class</i>   <i id="verde">Distrito </i>{
+              <i>private</i>  <i id="verde">String </i>coddis,nomdis;<i id="comentario">//variables</i>
+
+              <i>public </i>  <i id="amarillo">Distrito</i>() {
+                } <i id="comentario">//contructor sin paramentro</i>
+              <i>public </i>  <i id="amarillo">Distrito</i>(<i id="verde">String</i>  <i id="celeste">coddis</i>, <i id="verde">String </i> <i id="celeste">nomdis</i>) {
+                  <i id="celeste">this</i>.coddis = coddis;
+                  <i id="celeste">this</i>.nomdis = nomdis;
+                }<i id="comentario">//contructor con paramentro</i>
+              <i>public </i>  <i id="verde">String</i>  <i id="amarillo">getCoddis</i>() {
+                  <i id="morada">return</i> coddis;
+                }
+              <i>public </i>  <i id="verde">void</i>  <i id="amarillo">setCoddis</i>(<i id="verde">String</i>  <i id="celeste">coddis</i>) {
+                   <i id="celeste">this</i>.coddis = coddis;
+                }
+              <i>public </i>  <i id="verde">String</i>  <i id="amarillo">getNomdis</i>() {
+                    <i id="morada">return</i> nomdis;
+                }
+              <i>public </i>  <i id="verde">void</i>  <i id="amarillo">setNomdis</i>(<i id="verde">String</i>  <i id="celeste">nomdis</i>) {
+                    <i id="celeste">this</i>.nomdis = nomdis;
+                }
+            }
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="btn-link">Listar datos de una DB:-</a> se encuentar el código de como es el listado
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+      <div class="panel-body">
+        <pre class="contenedor_texto_java">
+          <i>package</i>  Operacion;
+
+          <i>import</i>  Connections.ConexionDB; <i id="comentario">//importamos la clase ConexionDB</i>
+          <i>import</i> java.sql.*; <i id="comentario">//importamos la libreria SQL todo *</i>
+          <i>import</i>  java.util.ArrayList; <i id="comentario">//importar ArrayList</i>
+          <i>import</i>  modelo.Distrito; <i id="comentario">importamos la clase Distrito</i>
+          <i id="comentario">
+          /**
+          *
+          * @author RICHARD
+          */</i>
+          <i>public class </i><i id="verde">DistritoDB</i>  {
+              <i id="verde">Connection </i> cnx=<i>null</i> ; 
+              <i id="verde">Statement</i>  st = <i>null</i> ;
+              <i id="verde">ResultSet</i>  rs = <i>null</i> ;
+              <i id="verde">PreparedStatement</i>  pst = <i>null</i> ; 
+                        
+              <i id="comentario">//metodo que se encarga de listar datos de la db la tabla distrito</i>
+          <i>public</i>  <i id="verde">ArrayList< Distrito></i>  getListar(){
+              <i id="verde">ArrayList< Distrito></i>  distrito=<i id="morada">new</i> <i id="verde">ArrayList<></i> ();
+              <i id="morada">try</i> {
+                  cnx=ConexionDB.getConneccion();
+                  st=cnx.createStatement();
+                  rs=st.executeQuery(<i id="marron">"select coddis,nomdis from distritos "</i>);
+                  <i id="morada">while</i>(rs.next()){
+                  <i id="verde">Distrito</i>  dis=<i id="morada">new</i> <i id="verde">Distrito</i> ();
+                        dis.setCoddis(rs.getString(1));
+                        dis.setNomdis(rs.getString(2));
+                        distrito.add(dis);
+                  }
+              } <i id="morada">catch</i> (<i id="verde">SQLException</i>  e) {
+                        <i id="verde">System</i>.out.println(e.getMessage()+<i id="marron">"error </i>);
+          }
+          <i id="morada">return</i> distrito;
+          }  
+          <i id="comentario">//pegar el metodo que sige que es insertar datos InsertInto(Distrito dis)</i>
+        </pre>
+      </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="btn-link">Guardar datos a una DB:-</a> solo se encuentra el metodo que se encarga de guardar a una DB</h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+      <div class="panel-body">
+        <pre class="contenedor_texto_java">
+          <i id="comentario">//este metodo es el que contenua de la clase DistritoDB </i>
+          <i>public</i> <i id="verde">void</i> <i id="amarillo">InsertInto</i>(<i id="verde">Distrito</i> <i id="celeste">dis</i>){
+             <i id="moradad">try</i> {
+                 cnx=<i id="verde">ConexionDB</i>.getConneccion();
+                 pst=cnx.prepareStatement(<i id="marron">"insert into distritos(coddis,nomdis)"</i>
+                         + <i id="marron">"values(?,?)"</i>);
+                 pst.setString(1, dis.getCoddis());
+                 pst.setString(2, dis.getNomdis());
+                 pst.executeUpdate();
+             } <i id="moradad">catch</i> (<i id="verde">SQLException</i> e) {
+                 <i id="verde">System</i>.out.println(e.getMessage()+<i id="marron">" Error guardar"</i>);
+             } 
+          }
+        </pre>
+      </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" class="btn-link">Actualzair una DB:-</a> Metodo de actualización de una Base de Datos 
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body">
+        <pre class="contenedor_texto_java">
+          <i id="comentario"> // el metod de actualizar una base de datos</i>
+          <i>public</i> <i id="verde">void</i> <i id="amarrillo">Update</i>(<i id="verde">Distrito</i> <i id="celeste">dis</i>){
+            <i id="morada">try</i> {
+                cnx=ConexionDB.getConneccion();
+                pst=cnx.prepareStatement(<i id="marron">"update distritos set nomdis=?"</i>
+                             + <i id="marron">" where coddis=? "</i>);
+                pst.setString(1, dis.getNomdis());
+                pst.setString(2, dis.getCoddis());
+                pst.executeUpdate();
+                } <i id="morada">catch</i> (<i id="verde">SQLException</i> e) {
+                  <i id="verde">System</i>.out.println(e.getMessage()+<i id="marron">" Error update"</i>);
+                }
+          }
+        </pre>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" class="btn-link">Eliminar datos de una DB:-</a> Metodo para Eliminar datos  de una Base de Datos 
+        </h4>
+        </div>
+        <div id="collapse7" class="panel-collapse collapse">
+          <div class="panel-body">
+            <pre class="contenedor_texto_java">
+              <i id="comentario">//metodo que se encarga de eliminar datos de una db</i>
+              <i>public</i> <i id="verde">void</i> <i id="amarillo">Delete</i>(<i id="verde">String</i> <i id="celeste">delete</i>){
+                <i id="morada">try</i>{
+                     cnx=<i id="verde">ConexionDB</i>.getConneccion();
+                     pst=cnx.prepareStatement(<i id="marron">"delete from distritos "</i>
+                             + <i id="marron">" where coddis=? "</i>);
+                     pst.setString(1, delete);
+                     pst.executeUpdate();
+                } <i id="morada">catch</i> (<i id="marron">SQLException</i> e) {
+                     <i id="verde">System</i>.out.println(e.getMessage()+<i id="marron">" Error update"</i>);
+                }
+              } 
+            </pre>
+          </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" class="btn-link">Buscar Datos de una DB</a> Metodo para Buscar datos  de una Base de Datos 
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse">
+        <div class="panel-body">
+          <pre class="contenedor_texto_java">
+            <i id="comentario">//conenua la clase DistritoDB buscar datos</i>
+            <i>public</i> <i id="verde">Distrito</i> <i id="amarrillo">getSelect</i>(<i id="verde">String</i> <i id="celeste">buscar</i>){
+              <i id="verde">Distrito</i> dis=<i>null</i>;
+              <i id="morada">try</i> {
+                  cnx=ConexionDB.getConneccion();
+                  st=cnx.createStatement();
+                  rs=st.executeQuery(<i id="marron">"select coddis,nomdis from distritos "</i>
+                             + <i id="marron">"where coddis='"</i>+buscar+<i id="marron">"'"</i>);
+                  <i id="morada">while</i>(rs.next()){
+                    dis=<i id="morada">new</i> <i id="verde">Distrito</i>();
+                    dis.setCoddis(rs.getString(1));
+                    dis.setNomdis(rs.getString(2));
+                  } 
+              } <i id="morada">catch</i> (<i id="verde">SQLException</i> e) {
+                    <i id="verde">System</i>.out.println(e.getMessage()+<i id="marron">"Error en la Busqueda"</i>);
+              }
+              <i id="morada">return</i> dis;
+            } <i id="comentario">//final del metodo</i>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse9" class="btn-link">Obtener el ultimo data de la DB:-</a> Metodo que que cumplirá la función de generar el codigo 
+        </h4>
+      </div>
+      <div id="collapse9" class="panel-collapse collapse">
+        <div class="panel-body">
+          <pre class="contenedor_texto_java">
+            <i id="comentario">//buscamos el ultmimo código </i>
+            <i>public</i> <i id="verde">String</i> <i id="amarrillo">getUltimoCodigo</i>(){
+              <i id="verde">String</i> ultCodigo=<i>null</i>;
+              <i id="morada">try</i>{
+                  cnx = <i id="verde">ConexionDB</i>.getConneccion();
+                  st = cnx.createStatement();
+                  rs = st.executeQuery(<i id="marron">"SELECT coddis FROM distritos "</i>
+                        + <i id="marron">"where 0 < (select count(*) from distritos)")</i>;
+                  <i id="morada">while</i>(rs.next()){
+                    ultCodigo=rs.getString("coddis");
+                  }
+              }<i id="morada">catch</i>(<i id="verde">SQLException</i> ex) {
+                <i id="verde">System</i>.out.println(ex.getMessage());
+              }
+              <i id="morada">return</i> ultCodigo;
+            }
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse10" class="btn-link">Obtener el ultimo data de la DB:-</a> Metodo que que cumplira la función de generar el codigo 
+        </h4>
+      </div>
+      <div id="collapse10" class="panel-collapse collapse">
+        <div class="panel-body">
+          <pre class="contenedor_texto_java">
+              
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+	</div>
+	<div class="col-lg-2"></div>
+</div>
+
+  
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

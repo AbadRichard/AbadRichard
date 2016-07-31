@@ -168,12 +168,6 @@
 .r_mano:hover{
 	-webkit-transform: rotate(-30deg) translate(30px, 0);
 }
-/*diseño para la bandera que hay dentro del android*/
-.bandera{	
-	width: 160px; 
-	height: 100px; 
-	margin-top: -140px;
-}
 
 /*diseño para la imagen de java*/
 .img_java{
