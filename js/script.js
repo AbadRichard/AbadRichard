@@ -1,15 +1,4 @@
 
-$(document).ready(function(){
-    $(".android").hover(function(){
-        $(".rojo1").css("background-color", "red");
-        $(".blanco").css("background-color", "white");
-        $(".rojo2").css("background-color", "red");
-      }, function(){ 
-        $(".rojo1").css("background-color", "black");
-        $(".blanco").css("background-color", "black");
-        $(".rojo2").css("background-color", "black");
-     });
-});
 
    //diguja texto en la cabezera
  function diguja_texto_cabezera()  {
