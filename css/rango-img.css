@@ -1,0 +1,65 @@
+
+
+.ra_btn] {
+  display: block;
+  width: 400px;
+}
+
+.ra_btn:focus {
+  outline: none;
+}
+
+.ra_btn,
+.ra_btn::-webkit-slider-runnable-track,
+.ra_btn::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+/*el button de navegador*/
+.ra_btn::-webkit-slider-thumb {
+  background-color: white;
+  width: 25px ;
+  height: 25px;
+  border: 3px solid #333;
+  border-radius: 50%;
+  margin-top: 1px;
+}
+.ra_btn::-ms-thumb {
+  background-color: #777;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #333;
+  border-radius: 50%;
+}
+/*tamañ del fondo */
+.ra_btn::-webkit-slider-runnable-track {
+  background-color: #777;
+  height: 30px;
+  border-radius: 10px;
+  border-color: black;border-style: solid; border-width: 2px;
+}
+
+
+.inputDiv3, .inputDiv4,.inputDiv5,.inputDiv6,.inputDiv7,.inputDiv8,.inputDiv2,.inputDiv1
+{margin-top: 2px;}
+/*poner texto delante de una imagen*/
+
+/*para poner una img delante de*/
+
+ 
+.vista_img1 .color_fondo1,.vista_img1 .content {
+  width: 100%; height: 100%;
+  transition: all 0.3s ease-in 0.4s;
+  position: absolute;
+  overflow: hidden;  top: 0;    left: 0;
+  transition-delay: 0s;
+ }
+.cont_codigo_html{background-color: black;color: white; font-size: 15px;}
+i{color: rgba(204, 127, 245, 1);}
+#verdHtml{color: rgba(133, 208, 11, 1);}
+#amaHtml{color:rgba(247, 249, 134, 1);}
+#azuHtml{color: rgba(61, 190, 245, 1); }
+#morHtml{color: rgba(175, 35, 251, 1);}
+#rojHtml{color: rgba(239, 82, 82, 1);}
+#comHtml{color: rgba(170, 158, 151, 1);}
+#roh{color: rgba(208, 11, 96, 1);}
+#img_mover{margin-left: 20px;}

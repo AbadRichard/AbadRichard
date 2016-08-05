@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hola</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<style type="text/css"></style>
+ <script type="text/javascript"> 
+    $(document).ready(function(){ 
+       $("#boton").click(function(){
+          var nombre = $("#nombre").val();
+          $("#saludo").val(nombre);
+       }); 
+    }); 
+ </script>
+ 
+ <script> 
+    $(document).ready(function(){ 
+       $("#producto").click(function(){
+          var nombre = $("#producto").val();
+          $("#res").val(nombre);
+       }); 
+    }); 
+ </script>
+ </head>
+ <body>
+ <div class="col-lg-2">
+	<input type="range" max="10" min="1" value="5" class="rango" class="form-control">
+	<span class="recibe">40</span>
+
+</div>
+
+<script type="text/javascript">
+$('.rango').on('change',function(){
+var valor=$('.rango').val();
+
+$('.recibe').text(valor);
+} ) 
+
+</script>
+       <div style=" margin-left:100px;">
+         <select name="" id="producto">
+             <option value="2000">Computadora</option>
+             <option value="54654">Audifono</option>
+             <option value="457547">Celulares</option>
+             <option value="Vieja Chismosa">Colchones</option>
+         </select>
+         <input id="res" type="text" name="" value="" />
+      </div>
+      <script type="text/javascript"> 
+    $(document).ready(function(){ 
+       $("#a").click(function(){
+          var nombre = $("#n").val();
+          if(nombre==""){
+            $("#r").html('es obligatorio'); } });
+    //para poder borrar el contenido del error
+       $( "#n" ).click(function() {
+            $( "#r" ).empty(); });});
+ </script>
+ 
+     <form action="javascript:void(0);">
+       <input type="text" id="n"  />
+       <div id="r" style="color:  red;"></div><br>
+       <input type="text" name="" value="" id="a" />
+       
+       <input type="button" id="b" value="Mostrar nombre" />
+       
+    </form>
+ <script type="text/javascript">
+    
+ </script>
+   
+    <form action="">
+       <input type="text" id="nombre" />
+       <input type="button" id="boton" value="Mostrar nombre" />
+       <input type="text" id="saludo" />
+       
+    </form>
+     
+     <script type="text/javascript"> 
+       $(document).ready(function(){
+          $("#value_1").keyup(function(){
+             var valor = $(this).val();
+             $("#value_2").val(valor);
+          });
+       }); 
+    </script>
+ 
+    <form action="javascript:void(0);">
+       Escribir algo
+       <input type="text" id="value_1" />
+       <br />
+       <textarea id="value_2" cols="50" rows="10"></textarea>
+    </form>
+    
+    <script type="text/javascript"> 
+      $(document).ready(function(){
+         var texto = $("#caja").html();
+         $("#caja").hover(
+            function(){
+               $(this).html('');//Mouse arriba del elemento
+            },
+            function(){
+               $(this).html(texto);//Mouse fuera del elemento
+            }
+         );
+      }); 
+ </script>
+<div id="caja" style="width: 80px; height: 80px; padding: 10px; background-color: #ccc;"> Posicione el mouse arriba </div>
+ <script type="text/javascript"> 
+       $(document).ready(function(){ 
+          $("#copiar").click(function(){
+             var parrafo = $("#parrafo1").html();
+             $("#parrafo2").html(parrafo);
+          });
+       }); 
+    </script>
+ 
+    <p id="parrafo1"> Soy un <strong> parrafo </strong> </p>
+    <a id="copiar" href="#"> Copiar </a>
+    <p id="parrafo2"> ... </p>
+ <script type="text/javascript">
+$(document).ready(function() {
+$('#botons').mousedown(function(){
+$("#MostrarTexto").css({position:'absolute', left:'200px'});
+});
+});
+</script>
+ <script type="text/javascript">
+$(document).ready(function() {
+$('#sele').mousedown(function(){
+   var nombre = $("#sele").val();
+$("#mostr").val(nombre);
+});
+});
+</script>
+<select name="" id="sele">
+    <option>dffffffffffff</option>
+    <option>nhgggggggg</option>
+</select>
+<input type="text" name="" value="" id="mostr"/>
+
+<input type="button" id="botons" value="Desplazamiento">
+<div id="MostrarTexto" style="color: green;">Me tengo que desplazar</div>
+ 
+<script>
+    $(document).ready(function(){ 
+          $("#copiar").keydown()(function(){
+             var parrafo = $("#parrafo1").html();
+             $("#parrafo2").html(parrafo);
+          });
+       });  
+</script>
+<form>
+    <input type="text" name="" value="" id="nom" />
+    <input type="text" name="" value="" id="ape"/>
+    <input type="text" name="" value="" id="telef"/>
+</form>
+ <p>hola</p>
+ <p>
+  Hello, <span>Person</span> <em>and person</em>.
+</p>
+ 
+<input type="text" value="" id="borrar"/>
+<script>
+$( "#borrar" ).click(function() {
+  $( "p" ).empty();
+});
+</script>
+ 
+<input type="submit" name="" id="btn_rango"   value="ingresar">
+<input type="text" name=""  value="0" id="nombre" >
+  <input type="text" name="text1" id="text1" onkeyup="copiar()">
+	<input type="text" name="text2" id="text2">  
+
+<script type="text/javascript">
+     $(document).ready(function() {
+	$('btn_rango').click(function() {
+        
+ 		$(this).find('ul').css({display: "block"});
+	 },
+ 	
+}); function copiar()
+		{
+			document.getElementById("text2").value=document.getElementById("text1").value;
+		}
+	
+</script>
+    
+</body>
+</html>

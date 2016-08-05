@@ -1,4 +1,10 @@
-
+//selecionar conbobox y pasar el valor a una caja de texto
+$(document).ready(function(){ 
+       			$("#producto").click(function(){
+          			var nombre = $("#producto").val();
+         			 $("#select_producto").val(nombre);
+       				}); 
+    			}); 
 
    //diguja texto en la cabezera
  function diguja_texto_cabezera()  {

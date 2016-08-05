@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
+	<link rel="stylesheet" type="text/css" href="css/rango-img.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/order-img.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+	<link rel="icon" href="img/one piece.ico">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="60" onload="diguja_texto_cabezera() ">
+        <canvas  id="canvas_cabezera"></canvas>       
+<nav class="navbar navbar-inverse "  data-spy="affix" data-offset-top="60">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button><div class="ajax_menups">
+      <a   href="index.html" class="navbar-brand actives ">AbadRichard</a>
+      </div>
+            
+        </div>
+    
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav ">
+
+                <li><a  class="btn_menu" href="order-img.html">Ordena Imagen</a></li>
+                <li><a  class="btn_menu"  href="ayuda.html">ComboBox</a></li>
+                <li><a  class="btn_menu" href="index.html">contenido</a></li>
+            </ul>   
+        </div>
+    </div>  
+</nav><br><br>
+<div class="llevar_contenido">
+<div class="container-fluid">
+<div class="row">
+	<div class="col-lg-4">
+    <div class="col-lg-6">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">borde superior</div>
+            <div class="panel-body">
+              <div class="inputDiv01">
+                <input type="range" name=""  id="borde_esa" max="50" min="0" value="1" step="1" class="ra_btn1">
+                </div>
+                <div class="inputDiv02">
+                <input type="range" name=""  id="borde_esb" max="50" min="0" value="1" step="1" class="ra_btn1">
+                </div>   
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="panel-group">
+        <div class="panel panel-default">
+        <div class="panel-heading">borde base</div>
+        <div class="panel-body">
+            <div class="inputDiv03">
+            <input type="range" name="" id="borde_esc"  max="50" min="0"  value="0" step="1" class="ra_btn1">
+            </div>
+            <div class="inputDiv04">
+            <input type="range" name=""  id="borde_esd" min="0" max="50" step="1" value="1"  class="ra_btn1">
+            </div>  
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading"><label><button type="button" class="btn btn-danger btn_1" data-toggle="collapse" data-target="#demo">posición left and top</button></label><--Click para Ocultar 
+            </div>
+            <div  id="demo" class="collapse panel-body ">
+            <div class="inputDiv1">
+            <input type="range" name=""  id="range_ancho" max="256" min="0" value="1" step="1" class="ra_btn">
+            </div>
+            <div class="inputDiv2">
+            <input type="range" name=""  id="range_altura" max="350" min="0" value="1" step="1" class="ra_btn">
+            </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><label>
+            <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo1">activar todo los bordes</button></label> <--Click para Ocultar</div>
+            <div id="demo1" class="collapse panel-body ">
+            <div class="inputDiv3">
+            <input type="range" name="" id="range_borde"  max="70" min="0"  value="0" step="1" class="ra_btn">
+            </div> 
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><label>
+            <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo2">Opacidad de la imagen</button></label> <--Click para Ocultar</div>
+            <div id="demo2" class="collapse panel-bod">
+            <div class="inputDiv4">
+            <input type="range" name=""  id="range_color" min="0" max="2" step="0.1" value="1"  class="ra_btn">
+        </div></div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><label>
+            <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo3">Girar la Imagen</button></label> <--Click para Ocultar</div>
+            <div id="demo3" class="collapse panel-bod">
+            <div class="inputDiv5">
+            <input type="range" name=""  id="range_giro" min="0" max="360" step="1" value="0"  class="ra_btn">
+            </div> </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><label>
+            <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo4">Tamago width && height</button></label> <--Click para Ocultar</div>
+            <div id="demo4" class="collapse panel-bod">
+            <div class="inputDiv8">
+            <input type="range" name=""  id="range_width" min="0" max="250" step="1" value="98"  class="ra_btn">
+            </div> 
+            <div class="inputDiv7">
+            <input type="range" name=""  id="range_height" min="0" max="250" step="1" value="129"  class="ra_btn">
+            </div></div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><label>
+            <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo5">Tamaño de Imagen</button></label> <--Click para Ocultar</div>
+            <div id="demo5" class="collapse panel-bod">
+            <div class="inputDiv6">
+            <input type="range" name=""  id="range_width_height" min="0" max="250" step="1" value="98"  class="ra_btn">
+            </div>  </div>
+        </div>
+    </div>
+  </div>
+<div class="col-lg-4" >
+	<div class="vista_img1 vista_texto1 " >
+	   <img src="img/html-texto.png" class="img-responsive "/>
+        <div class="color_fondo1 ">
+	    <img src="img/html.png" class="img-responsive " id="img_mover" />
+	    </div>
+    </div>
+        
+</div>
+    <div class="col-lg-4">
+    <div class="panel-group">
+    <div class="panel panel-default">
+    <div class="panel-heading"><label><p class="">Código de CSS</p></label></div>
+    <div class="panel-body">
+ <pre class="cont_codigo_html">
+<i id="verdHtml">.vista_img .color_fondo,.vista_img .content</i> {
+  <i id="azuHtml">width</i>: <i>100</i><i id="rojHtml">%</i>; <i id="azuHtml">height</i>: <i>100</i><i id="rojHtml">%</i>;
+  <i id="azuHtml">transition</i>: <i id="azuHtml">all</i> <i>0.3</i><i id="rojHtml">s</i> <i id="azuHtml">ease-in</i> <i>0.4</i><i id="rojHtml">s</i>;
+  <i id="azuHtml">position</i>: <i id="azuHtml">absolute</i>;
+  <i id="azuHtml">overflow</i>: <i id="azuHtml">hidden</i>;  <i id="azuHtml">top</i>: <i>0</i>;    <i id="azuHtml">left</i>: <i>0</i>;
+  <i id="azuHtml">opacity</i>: <i id="pbtnOp">0.0</i>;  <i id="azuHtml">transition-delay</i>: <i>0</i><i id="rojHtml">s</i>;
+ }
+<i id="verdHtml">.img_html</i>{
+  <i id="azuHtml">margin-top</i>: <i id="pegar_top">0</i><i id="rojHtml">px</i>;
+  <i id="azuHtml">margin-left</i>: <i id="pegar_left">0</i><i id="rojHtml">px</i>;
+  <i id="azuHtml">width</i>: <i class="pbtnw pbtnwh">0</i><i id="rojHtml">px</i>;
+  <i id="azuHtml">height</i>: <i class="pbtnh pbtnwh">0</i><i id="rojHtml">px</i>;
+  <i id="azuHtml">-ms-transform</i>: <i id="azuHtml">rotate</i>(<i class="pbtnG">0</i><i id="rojHtml">deg</i>); <i id="comHtml">/* IE 9 */</i>
+  <i id="azuHtml">-webkit-transform</i>: <i id="azuHtml">rotate</i>(<i class="pbtnG">0</i><i id="rojHtml">deg</i>); <i id="comHtml">/* Chrome, Safari, Opera */</i>
+  <i id="azuHtml">transform</i>: <i id="azuHtml">rotate</i>(<i class="pbtnG">0</i><i id="rojHtml">deg</i>);
+  <i id="azuHtml">border-radius</i>: <i class="pbtnborde pbtna">0</i><i id="rojHtml">px</i> <i class="pbtnborde pbtnb">0</i><i id="rojHtml">px</i> <i class="pbtnborde pbtnc">0</i><i id="rojHtml">px</i> <i class="pbtnborde pbtnd">0</i><i id="rojHtml">px</i>;
+}
+</pre>       
+    </div>     
+    </div>
+  
+</div>
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading"><label>Código html</label></div>
+        <div class="body">
+ <pre class="cont_codigo_html">
+&lt;!<i id="roh">DOCTYPE</i> html>
+&lt;<i id="roh">html</i>>
+&lt;<i id="roh">head</i>>   
+&lt;/<i id="roh">head</i>>
+&lt;<i id="roh">body</i>>
+    &lt;<i id="roh">div</i> <i id="verdHtml">class</i>=<i id="amaHtml">"vista_img vista_texto "</i>>
+       &lt;<i id="roh">img</i> <i id="verdHtml">src</i>=<i id="amaHtml">"img/html-texto.png" </i><i id="verdHtml">class</i>=<i id="amaHtml">"img-responsive "</i>/>
+       &lt;<i id="roh">div</i> <i id="verdHtml">class</i>=<i id="amaHtml">"color_fondo "</i>>
+       &lt;<i id="roh">img</i> <i id="verdHtml">src</i>=<i id="amaHtml">"img/html.png"</i> <i id="verdHtml">class</i>=<i id="amaHtml">"img-responsive img_html" </i>/>
+       &lt;/<i id="roh">div</i>>
+    &lt;/<i id="roh">div</i>>
+&lt;/<i id="roh">body</i>>
+&lt;/<i id="roh">hmtl</i>>
+</pre>           
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

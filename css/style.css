@@ -5,11 +5,11 @@
          width: 100%;
          z-index: 9999 !important;
 }
-.navbar{ 
-	margin-bottom: 0px;  
-	border:none; 
-	background-color: #555; 
-	border-radius: 0px;	
+.navbar{
+	margin-bottom: 0px;
+	border:none;
+	background-color: #555;
+	border-radius: 0px;
 }
 .affix ~ .container-fluid {  position: relative; }
 
@@ -22,6 +22,7 @@
 	background-color:black;
 	color: white;
 }
+
 .navbar .actives{
 	color:#999;
 	border-right-style: solid;
@@ -53,7 +54,7 @@
 		width: 100%;
 		margin: 0;
 		padding: 0;
-		border: solid 1px #ccc; 
+		border: solid 1px #ccc;
 		border-style: double;
   		display: block;
 
@@ -61,7 +62,7 @@
 	@media screen and (max-width: 980px) {
 		#canvas_cabezera {
 			width: 99%;
-		}	
+		}
 	}
 	#camvas_body{
 		height: 100%;
@@ -73,22 +74,22 @@
 	@media screen and (max-width: 980px) {
 		#camvas_body {
 			width: 99%;
-		}	
+		}
 	}
 /*imagen del android*/
 
 .android{
 	height: 300px;
 	width: 204px;
-	margin: o; 
+	margin: o;
 	padding: 0;
 	position: relative;
-	
+
 	margin-left: 40px;
 }
 .cabeza{
 	width: 160px; height: 70px;
-	background: black; 
+	background: black;
 	border-radius: 600px 600px 0 0;
 	-moz-border-radius:  600px 600px 0 0;
 	-webkit-border-radius: 600px 600px 0 0;
@@ -108,7 +109,7 @@
 .l_antena, .r_antena{
 	width: 6px; height: 40px;
 	position: absolute; top: -20px;
-	background: black; 
+	background: black;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -171,7 +172,7 @@
 
 /*diseño para la imagen de java*/
 .img_java{
-	border-style: solid; border-width: 4px; border-color: red;	
+	border-style: solid; border-width: 4px; border-color: red;
 }
 /*color para el texto de java */
 .btn_java{
@@ -205,13 +206,13 @@
 .vista_texto:hover a {filter: alpha(opacity=100); opacity: 1;  transform: translateY(0px); transition-delay: 0.3s; }
 .vista_img{transition-delay: 0s;
 		text-align:  justify;
-        overflow: hidden; 
-        position: relative;   
-        cursor: default;   
+        overflow: hidden;
+        position: relative;
+        cursor: default;
         background: #fff no-repeat center center;
     }
 .vista_img .color_fondo,.vista_img .content {
-	 position: absolute;  
+	 position: absolute;
      overflow: hidden;  top: 0;    left: 0;
 	 opacity: 1;  transition-delay: 0s;
  }
@@ -232,3 +233,9 @@
 	-webkit-transform : rotate(360deg); /* Chrome*/
 	-o-transform : rotate(360deg); /* Opera */
  }
+ /*diseño para html de ayuda*/
+ .html_ayuda{background-color: black; color: white; font-size: 15px;)}
+i{color: rgba(208, 11, 96, 1)}
+#verde_html{color: rgba(133, 208, 11, 1)}
+#am_html{color:rgba(247, 249, 134, 1)}
+#azu_html{color: rgba(61, 190, 245, 1);  }

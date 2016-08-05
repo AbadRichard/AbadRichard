@@ -6,6 +6,8 @@ return false;
 });
 
 });
+
+
    //diguja texto en la cabezera
   window.onload= function ()  {
 		

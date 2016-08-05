@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mijael</title>
+	<link rel="stylesheet" type="text/css" href="triangulo_lateral.css">
+	<style>
+		#boton{
+		
+		background:gray;
+		width: 100px;
+		height: 40px;
+		border: none;
+		border-radius: 5px;
+		color:white;
+		
+		}
+		#rojo{
+			background: red;
+
+		}
+		#verde{
+			background: green;
+		}
+		#azul{
+			background: blue;
+		}
+		button{
+			color: white;
+		}
+		
+	</style>
+
+</head>
+<body>
+<button id="boton">button</button>
+<div>
+	<button id="rojo" onclick="pintar('red')">rojo</button>
+	<INPUT id="select_rojo" TYPE="RANGE" MIN="0" MAX="255" STEP="1"  onmousemove ="pintar2('red')">
+</div>
+<div>
+	<button id="verde" onclick="pintar('green')">verde</button>
+	<INPUT id="select_verde" TYPE="RANGE" MIN="0" MAX="255" STEP="1"  onmousemove ="pintar2('red')">
+</div>
+<div>
+	<button id="azul" onclick="pintar('blue')">azul</button>
+	<INPUT id="select_azul" TYPE="RANGE" MIN="0" MAX="255" STEP="1"  onmousemove ="pintar2('red')">
+</div>
+<div>
+	<p>opacidad</p>
+	<INPUT id="select_opacidad" TYPE="RANGE" MIN="0" MAX="10" STEP="1" value="10"  onmousemove ="pintar2('red')">
+</div>
+
+
+<script>
+ 	function pintar(color){
+ 		var boton = document.getElementById("boton");
+ 		boton.style.background = color;
+ 	}
+		
+		function pintar2(color){
+			var opacidad = document.getElementById("select_opacidad").value;
+			var cantidad_rojo = document.getElementById("select_rojo").value;
+			var cantidad_verde = document.getElementById("select_verde").value;
+			var cantidad_azul = document.getElementById("select_azul").value;
+
+			var boton = document.getElementById("boton");
+			if(opacidad==10){
+				boton.style.background = "rgba("+cantidad_rojo+","+cantidad_verde+","+cantidad_azul+","+opacidad+")";
+			}else{
+ 				boton.style.background = "rgba("+cantidad_rojo+","+cantidad_verde+","+cantidad_azul+",0."+opacidad+")";
+ 			}
+
+		}
+		
+	</script>
+
+<div class="triangulo_lateral">
+	<p>triangulo lateral</p>
+</div>
+
+<div class="triangulo_superior">
+	<p>triaangulo superior</p>
+</div>
+
+<div class="esquina_pagina">
+	<p>Esquina de pagina</p>
+</div>
+
+<div class="sombra_fija">
+	<p>Sombra fija</p>
+</div>
+
+<div class="sombra_difuminada">
+	<p>sonbra difuminada</p>
+</div>
+
+<div class="sombra_externa">
+	<p>sombra externa</p>
+</div>
+
+<div class="sombra_interna">
+	<p>sombra interna</p>
+</div>
+
+<div class="resaltar_borde">
+	<p>resaltar borde</p>
+</div>
+
+<div class="borde_interno">
+	<p>borde interno</p>
+</div>
+
+<div class="expandir_borde">
+	<p>expansion de borde</p>
+</div>
+
+<div class="recoger_borde">
+	<p>recoger borde</p>
+</div>
+
+<div class="redondear_esquina">
+	<p>redondear esquinas</p>
+</div>
+
+<div class="barra_menu">
+	<nav>
+		<ul>
+			<li><a href="#">Opcion 1</a></li>
+			<li><a href="#">Opcion 2</a></li>
+			<li><a href="#">Opcion 3</a></li>
+		</ul>
+	</nav>
+</div>
+
+</body>
+</html>

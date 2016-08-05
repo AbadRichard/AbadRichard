@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<link rel="icon" href="img/one piece.ico">
+    <title>AbadRichard.com</title>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="60" onload="diguja_texto_cabezera() ">
+        <canvas  id="canvas_cabezera"></canvas>       
+<nav class="navbar navbar-inverse "  data-spy="affix" data-offset-top="60">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button><div class="ajax_menups">
+      <a   href="index.html" class="navbar-brand actives ">AbadRichard</a>
+      </div>
+            
+        </div>
+    
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav ">
+
+                <li><a  class="btn_menu" href="order-img.html">Ordena Imagen</a></li>
+                <li><a  class="btn_menu"  href="ayuda.html">ComboBox</a></li>
+                <li><a  class="btn_menu" href="index.html">contenido</a></li>
+            </ul>   
+        </div>
+    </div>  
+</nav>
+<div class="llevar_contenido">
+<div class="container-fluid">
+<div>
+	
+<script>
+	$(document).on('input change', '#slider', function() {
+    $('#slider_value').html( $(this).val() );
+});
+</script>
+<input type="range" id="slider" value="0.5" min="0.0" max="1.0" step="0.01" />
+<br />
+<span id="slider_value"></span>
+
+	<br>
+ 	<img src="img/html.png" id="img_mover"><br>
+ 	<input type="submit" id="v" name="" >
+		<input id="select_rango" TYPE="RANGE" MIN="0" MAX="255" STEP="1" class="rango" class="form-control">
+		<p id="recibe">00</p>
+
+	</div>
+
+<script type="text/javascript">
+//mover la imagen a left
+$(document).ready(function() {
+	$('#select_rango').mousemove(function(){
+		var aumentar= $("#select_rango").val();
+	$("#img_mover").css({ "margin-left":aumentar+"px"});
+	
+	});
+});
+//optener valor del range input
+$(document).on('input change', '#select_rango', function() {
+    $('#recibe').html( $(this).val() );
+});
+</script>
+
+</div>
+<div class="compiar_contenedor">
+<div class="row">
+	<div class="col-lg-2"></div>
+	<div class="col-lg-8">
+		<div class="col-lg-4"><label><p>codigo HTML</p></label>
+		<pre class="html_ayuda">	
+	&lt;<i>DOCTYPE</i> html>
+	&lt;<i>html</i>>
+	&lt;<i>head</i>>
+	&lt;<i>title</i>>&lt;/<i>title</i>>
+	&lt;/<i>head</i>>
+	&lt;<i>body</i>>
+	&lt;<i>select</i> <i id="verde_html">name</i>=<i id="am_html">""</i> <i id="verde_html">id</i>=<i id="am_html">"producto"</i>>
+            &lt;<i>option</i> <i id="verde_html">value</i>=<i id="am_html">"codigo_compuatdora"</i>>Computadora&lt;/<i>option</i>>
+            &lt;<i>option</i> <i id="verde_html">value</i>=<i id="am_html">"codigo_Audifono"</i>>Audifono&lt;/<i>option</i>>
+            &lt;<i>option</i> <i id="verde_html">value</i>=<i id="am_html">"codigo_Celulares"</i>>Celulares&lt;/<i>option</i>>
+            &lt;<i>option</i> <i id="verde_html">value</i>=<i id="am_html">"codigo_Colchones"</i>>Colchones&lt;/<i>option</i>>
+    	&lt;/<i>select</i>>
+    	&lt;<i>input</i> <i id="verde_html">id</i>=<i id="am_html">"select_producto"</i> <i id="verde_html">type</i>=<i id="am_html">"text" </i><i id="verde_html">name</i>=<i id="am_html">""</i> <i id="verde_html">value</i>=<i id="am_html">""</i>/>
+	&lt;/<i>body</i>>
+	&lt;/<i>html</i>></pre>
+		</div>
+		<div class="col-lg-4">
+		<label><p>codigo javascript</p></label>
+		<pre class="html_ayuda">
+	&lt;<i>script</i>> 
+    	<i>$</i>(<i id="azu_html">document</i>).<i id="azu_html">ready</i>(<i id="azu_html">function</i>(){ 
+       	  <i>$</i>(<i id="am_html">"#producto"</i>).<i id="azu_html">click</i>(<i id="azu_html">function</i>(){
+          <i id="azu_html">var</i> nombre = <i>$</i>(<i id="am_html">"#producto"</i>).<i id="azu_html">val</i>();
+          <i>$</i>(<i id="am_html">"#select_producto"</i>).<i id="azu_html">val</i>(nombre);
+       	  }); 
+    	}); 
+    	&lt;/<i>script</i>>
+ 		</pre>
+		</div>
+		<div class="col-lg-4">
+			<label><s>Ejemplo del codigo</s></label>
+			<div class="form-group">
+			<label> <p>pasaremos el valor de la combobox a una caja de texto usando jquery.min.js puedes ser uno de los verciones esta vez usare </p></label>
+			<select name="" id="producto" class="form-control ">
+             <option value="codigo_compuatdora">Computadora</option>
+             <option value="codigo_Audifono">Audifono</option>
+             <option value="codigo_Celulares">Celulares</option>
+             <option value="codigo_Colchones">Colchones</option>
+         	</select>
+         	<label> <p>En Esta caja de texto podremos ver los datos de la comBox pero solo se muestar el valor que se guardo</p></label>
+         	 <input id="select_producto" type="text" name="" value=""  class="form-control  " />
+			</div>
+			
+		</div>
+		
+			<script> 
+    			
+ 			</script>
+		</div>
+	<div class="col-lg-2"></div>
+</div>
+</div>
+<div class="row">
+	<div class="col-lg-2"></div>
+	<div class="col-lg-8">
+				<div class="col-lg-4">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 2</a>
+
+				</div>
+				<div class="col-lg-4">
+					<div class="">
+						<button class="btn_w"> mostarrs</button>
+					</div>
+				</div>
+		<div class="col-lg-4">
+			<div class="panel-group" id="accordion">
+		    <div class="panel panel-default">
+		      <div id="collapse1" class="panel-collapse collapse in">
+		        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		      </div>
+		    </div>
+		    <div class="panel panel-default">
+		      
+		      <div id="collapse2" class="panel-collapse collapse">
+		        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		      </div>
+		    </div>
+		    <div class="panel panel-default">
+		      <div id="collapse3" class="panel-collapse collapse">
+		        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		      </div>
+            </div>
+  			</div>
+  		</div>
+	</div>
+	<div class="col-lg-2"></div>
+</div>
+<div class="row">
+	<div class="col-lg-2"></div>
+	<div class="col-lg-8">
+		<div class="col-lg-4 contenido_a">
+
+			<a data-toggle="collapse"  href="#collapse11">Collapsible Group 1</a>
+			<a data-toggle="collapse"  href="#collapse21">Collapsible Group 2</a>
+			<a data-toggle="collapse"  href="#collapse31">Collapsible Group 2</a>
+		</div>
+				<div class="col-lg-4">
+					<div class="">
+						<button class="btn_w"> mostarrs</button>
+					</div>
+				</div>
+		<div class="col-lg-4 contenedor_java">
+			<div class="panel-group" id="accordion">
+		    <div class="panel panel-default">
+		      <div id="collapse11" class="panel-collapse collapse in">
+		        <div class="panel-body cont1">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		      </div>
+		    </div>
+		    <div class="panel panel-default">
+		      
+		      <div id="collapse21" class="panel-collapse collapse">
+		        <div class="panel-body llevar_contenido_al_contenedor">11 ipsum dolor sit amet, consectetur adipisicing elit,
+		        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		      </div>
+		    </div>
+		    <div class="panel panel-default">
+		      <div id="collapse31" class="panel-collapse collapse">
+		        <div class="panel-body llevar_contenido_al_contenedor">111111111111 ipsum dolor sit amet, consectetur adipisicing elit,
+		        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		      </div>
+            </div>
+  			</div>
+  		</div>
+	</div>
+	<div class="col-lg-2"></div>
+</div>
+</div>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$(".btn_w").click(function(){
+			$(".aculatdo").show();
+		})
+	});
+	function ocultar_contenido(){
+		$(".aculatdo").hide();
+	
+
+}
+$(document).ready(function() {
+$('.contenido_a a').click(function(){
+	var url=$(this).attr("href");
+      $('.contenedor_java').load(url+" .llevar_contenido_al_contenedor");
+return false;
+});
+
+});
+</script></div>
+</body>
+</html>
